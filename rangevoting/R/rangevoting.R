@@ -9,12 +9,10 @@
 #'@param N "Number of voters"
 #'@param candidates "Names of candidates"
 #'@param parties "Names of parties associated to candidates"
-#'@return The data frame containing randomly generated votes
+#'@return Data frame containing randomly generated votes
 #'@export
 randomvote = function(N,candidates,parties){
-  #INPUTS: number of voters N and arrays of candidates and parties they belong to
-  #OUTPUTS: csv file with random votes from a uniform distribution and corresponding data frame
-
+  
 ballots = replicate(N, round(runif(length(candidates),min=0,max=5)))
 votes = data.frame(candidates,ballots,row.names = parties)
 
