@@ -126,7 +126,7 @@ votehist = function(){
   votes=read.csv2(file="randomcostituency.csv", header=TRUE, row.names = 1)
   ballots=as.matrix(votes[,-1])
 
-  #2. plots an overlaid histogram of ballots
+  #2. plots grouped histograms of ballots
 
   his = plot_ly(x=~ballots[1,], type="histogram", name = row.names(votes[1,]), color = 1)
   for(i in 2:nrow(ballots)){
