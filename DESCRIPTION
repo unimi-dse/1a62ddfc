@@ -5,7 +5,10 @@ Version: 0.1.0
 Author: Davide Riva
 Maintainer: <davideriva96@gmail.com>
 Description: The package consists in four functions, which can create, count and plot the votes in a costituency that uses range voting in its STAR version.
-Imports: doParallel, foreach, plotly
+Imports: 
+   doParallel,
+   foreach,
+   plotly
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
