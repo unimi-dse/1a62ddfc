@@ -41,7 +41,7 @@ return(votes)
 majority = function(counter){
 
   #1. reads a csv file containing votes for each candidate in a costituency
-  votes=read.csv2(system.file("extdata/randomcostituency.csv",header = TRUE,row.names = 1))
+  votes=read.csv2(system.file("extdata/randomcostituency.csv",package = 'rangevoting'), header = TRUE,row.names = 1)
   ballots=as.matrix(votes[,-1])
 
   names(counter) = row.names(votes)
@@ -91,7 +91,7 @@ return(counter)
 proportional = function(seats,counter){
 
   #1. reads a csv file containing votes for each party in a costituency
-  votes=read.csv2(system.file("extdata/randomcostituency.csv", header=TRUE, row.names = 1))
+  votes=read.csv2(system.file("extdata/randomcostituency.csv",package = 'rangevoting'), header=TRUE, row.names = 1)
   ballots=as.matrix(votes[,-1])
 
   names(counter) = row.names(votes)
@@ -137,7 +137,7 @@ proportional = function(seats,counter){
 votehist = function(){
 
   #1. reads a csv file containing votes for each party in a costituency
-  votes=read.csv2(system.file("extdata/randomcostituency.csv", header=TRUE, row.names = 1))
+  votes=read.csv2(system.file("extdata/randomcostituency.csv",package = 'rangevoting'), header=TRUE, row.names = 1)
   ballots=as.matrix(votes[,-1])
 
   #2. plots an overlaid histogram of ballots
