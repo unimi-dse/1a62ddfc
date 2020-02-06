@@ -144,12 +144,11 @@ votehist = function(){
 
   his = plot_ly(x=~ballots[1,], type="histogram", name = row.names(votes[1,]), color = 1)
   for(i in 2:nrow(ballots)){
-  add_histogram(his,x=~ballots[i,], name = row.names(votes[i,]), color = i) %>%
+  his = his + add_histogram(his,x=~ballots[i,], name = row.names(votes[i,]), color = i) %>%
       layout(barmode="group")
   }
-  his
 
-  return()
+  return(his) 
 }
 
 ##########################
