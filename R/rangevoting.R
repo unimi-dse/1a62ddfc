@@ -23,7 +23,7 @@ randomvote = function(N,candidates,parties){
 ballots = replicate(N, round(runif(length(candidates),min=0,max=5)))
 votes = data.frame(candidates,ballots,row.names = parties)
 
-write.csv2(votes, file="randomcostituency.csv")
+write.csv2(votes, file="rancost.csv")
 return(votes)
 }
 
