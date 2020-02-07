@@ -1,4 +1,0 @@
-exportPattern("^[[:alpha:]]+")
-import(plotly)
-import(doParallel)
-import(foreach)
