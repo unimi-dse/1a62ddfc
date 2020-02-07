@@ -141,6 +141,8 @@ votehist = function(){
   ballots=as.matrix(votes[,-1])
 
   #2. plots an overlaid histogram of ballots
+  
+  # his = plot_ly(votes, x = ~seq(0,5), color = ~candidates) %>% add_histogram() 
 
   his = plot_ly(alpha =0.7)
   for(i in 1:nrow(ballots)){
