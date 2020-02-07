@@ -142,9 +142,9 @@ votehist = function(){
 
   #2. plots an overlaid histogram of ballots
 
-  his = plot_ly(x=~ballots[1,], type="histogram", name = row.names(votes[1,]), color = 1)
-  for(i in 2:nrow(ballots)){
-  his = his + add_histogram(his,x=~ballots[i,], name = row.names(votes[i,]), color = i) %>%
+  his = plot_ly(alpha =0.7)
+  for(i in 1:nrow(ballots)){
+  his = add_histogram(his,x=~ballots[i,], name = row.names(votes[i,]), color = i) %>%
       layout(barmode="group")
   }
 
