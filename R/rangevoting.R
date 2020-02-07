@@ -146,7 +146,7 @@ votehist = function(){
 
   his = plot_ly(alpha =0.7)
   for(i in 1:nrow(ballots)){
-  his = add_histogram(his,x=~ballots[i,], name = row.names(votes[i,]), color = i) %>%
+  his = add_histogram(his,x=~ballots[i,], name = row.names(votes[i,])) %>%
       layout(barmode="group")
   }
 
