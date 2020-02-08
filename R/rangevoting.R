@@ -168,7 +168,7 @@ votehist = function(){
   ballvec = as.vector(ballots)
   candvec = c()
   for(i in 1:nrow(ballots)){
-    candvec = c(candvec,rep(candidates[i],N))
+    candvec = c(candvec,rep(votes$candidates[i],N))
   }
   df = data.frame(candvec,ballvec)
 
