@@ -9,7 +9,7 @@ This package simulates the counting of votes in a costituency where the STAR Sys
 
 ## Dependencies
 
-Please notice that packages "foreach", "doParallel" and "plotly" are imported when installing the package.
+Please notice that packages _doParallel_ and _scrime_ are imported when installing the package. Packages _plotly_ and _foreach_ are imported and loaded.
 
 ## Installation
 In order to install and use the package:
